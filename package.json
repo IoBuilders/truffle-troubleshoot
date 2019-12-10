@@ -1,6 +1,6 @@
 {
   "name": "truffle-troubleshoot",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A Truffle plugin to troubleshoot your smart contract problems",
   "main": "src/index.js",
   "scripts": {
