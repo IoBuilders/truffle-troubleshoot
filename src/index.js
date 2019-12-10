@@ -1,15 +1,15 @@
 const chalk = require('chalk')
-const Web3 = require('web3');
+const Web3 = require('web3')
 
 const revertReason = require('./revert-reason')
 
 let exitCallBack
 
-function exitWithError(message) {
+function exitWithError (message) {
   exitCallBack(chalk.bold.red(message))
 }
 
-function printHelp() {
+function printHelp () {
   console.log(
     '\nUsage: truffle run troubleshoot [options] <command> [commandArguments...] \n\n' +
     'A Truffle plugin to troubleshoot your smart contract problems\n\n' +
@@ -49,7 +49,7 @@ module.exports = async (config, done) => {
   try {
     switch (command) {
       case 'revert-reason':
-        result = await revertReason(web3, ...commandArguments)
+        result = await revertReason(web3, config, ...commandArguments)
         break
       default:
         printHelp()
